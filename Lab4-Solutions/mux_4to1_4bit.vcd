@@ -1,0 +1,163 @@
+$date
+	Sun Sep  8 12:08:41 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 4 ! out [3:0] $end
+$var reg 4 " t_in0 [3:0] $end
+$var reg 4 # t_in1 [3:0] $end
+$var reg 4 $ t_in2 [3:0] $end
+$var reg 4 % t_in3 [3:0] $end
+$var reg 2 & t_select [1:0] $end
+$scope module m1 $end
+$var wire 4 ' in0 [3:0] $end
+$var wire 4 ( in1 [3:0] $end
+$var wire 4 ) in2 [3:0] $end
+$var wire 4 * in3 [3:0] $end
+$var wire 2 + select [1:0] $end
+$var wire 4 , out [3:0] $end
+$var wire 4 - m2 [3:0] $end
+$var wire 4 . m1 [3:0] $end
+$scope module mux1 $end
+$var wire 4 / in0 [3:0] $end
+$var wire 4 0 in1 [3:0] $end
+$var wire 1 1 n_s $end
+$var wire 1 2 select $end
+$var wire 4 3 w2 [3:0] $end
+$var wire 4 4 w1 [3:0] $end
+$var wire 4 5 out [3:0] $end
+$upscope $end
+$scope module mux2 $end
+$var wire 4 6 in0 [3:0] $end
+$var wire 4 7 in1 [3:0] $end
+$var wire 1 8 n_s $end
+$var wire 1 9 select $end
+$var wire 4 : w2 [3:0] $end
+$var wire 4 ; w1 [3:0] $end
+$var wire 4 < out [3:0] $end
+$upscope $end
+$scope module mux3 $end
+$var wire 4 = in0 [3:0] $end
+$var wire 4 > in1 [3:0] $end
+$var wire 1 ? n_s $end
+$var wire 1 @ select $end
+$var wire 4 A w2 [3:0] $end
+$var wire 4 B w1 [3:0] $end
+$var wire 4 C out [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1101 C
+b1101 B
+b0 A
+0@
+1?
+b1010 >
+b1101 =
+b1101 <
+b1101 ;
+b0 :
+09
+18
+b11 7
+b1101 6
+b1010 5
+b1010 4
+b0 3
+02
+11
+b101 0
+b1010 /
+b1101 .
+b1010 -
+b1101 ,
+b0 +
+b101 *
+b1010 )
+b11 (
+b1101 '
+b0 &
+b101 %
+b1010 $
+b11 #
+b1101 "
+b1101 !
+$end
+#10
+b11 !
+b11 ,
+b11 C
+b11 B
+b11 .
+b11 <
+b11 =
+b101 -
+b101 5
+b101 >
+b0 ;
+b0 4
+08
+b11 :
+01
+b101 3
+19
+12
+b1 &
+b1 +
+#20
+b1101 .
+b1101 <
+b1101 =
+b1010 -
+b1010 5
+b1010 >
+b1010 !
+b1010 ,
+b1010 C
+b1101 ;
+b1010 4
+b0 B
+18
+b0 :
+11
+b0 3
+0?
+b1010 A
+09
+02
+1@
+b10 &
+b10 +
+#30
+b101 !
+b101 ,
+b101 C
+b101 A
+b11 .
+b11 <
+b11 =
+b101 -
+b101 5
+b101 >
+b0 ;
+b0 4
+08
+b11 :
+01
+b101 3
+19
+12
+b11 &
+b11 +
+#40

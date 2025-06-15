@@ -1,0 +1,53 @@
+$date
+	Sun Sep  8 12:08:41 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 4 ! out [3:0] $end
+$var reg 4 " t_in0 [3:0] $end
+$var reg 4 # t_in1 [3:0] $end
+$var reg 1 $ t_select $end
+$scope module m1 $end
+$var wire 4 % in0 [3:0] $end
+$var wire 4 & in1 [3:0] $end
+$var wire 1 ' n_s $end
+$var wire 1 $ select $end
+$var wire 4 ( w2 [3:0] $end
+$var wire 4 ) w1 [3:0] $end
+$var wire 4 * out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1101 *
+b1101 )
+b0 (
+1'
+b11 &
+b1101 %
+0$
+b11 #
+b1101 "
+b1101 !
+$end
+#10
+b1100 !
+b1100 *
+b0 )
+0'
+b1100 (
+1$
+b1100 #
+b1100 &
+b10 "
+b10 %
+#20
