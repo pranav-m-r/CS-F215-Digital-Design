@@ -1,0 +1,125 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000251f0a6df50 .scope module, "testbench" "testbench" 2 2;
+ .timescale 0 0;
+v00000251f098ec40_0 .net "out", 0 0, L_00000251f0934060;  1 drivers
+v00000251f098ece0_0 .var "t_in", 3 0;
+v00000251f098fd20_0 .var "t_select", 1 0;
+S_00000251f0a6e0e0 .scope module, "m1" "mux_4to1" 2 10, 3 2 0, S_00000251f0a6df50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in";
+    .port_info 1 /INPUT 2 "select";
+    .port_info 2 /OUTPUT 1 "out";
+v00000251f098e100_0 .net "in", 3 0, v00000251f098ece0_0;  1 drivers
+v00000251f098fbe0_0 .net "m", 1 0, L_00000251f098e420;  1 drivers
+v00000251f098f0a0_0 .net "out", 0 0, L_00000251f0934060;  alias, 1 drivers
+v00000251f098eba0_0 .net "select", 1 0, v00000251f098fd20_0;  1 drivers
+L_00000251f098eec0 .part v00000251f098ece0_0, 2, 2;
+L_00000251f098f320 .part v00000251f098fd20_0, 0, 1;
+L_00000251f098f000 .part v00000251f098ece0_0, 0, 2;
+L_00000251f098fa00 .part v00000251f098fd20_0, 0, 1;
+L_00000251f098e420 .concat8 [ 1 1 0 0], L_00000251f0927e80, L_00000251f0928120;
+L_00000251f098e6a0 .part v00000251f098fd20_0, 1, 1;
+S_00000251f0a6e270 .scope module, "mux1" "mux_2to1" 3 6, 4 1 0, S_00000251f0a6e0e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "in";
+    .port_info 1 /INPUT 1 "select";
+    .port_info 2 /OUTPUT 1 "out";
+L_00000251f0928510 .functor NOT 1, L_00000251f098fa00, C4<0>, C4<0>, C4<0>;
+L_00000251f0928190 .functor AND 1, L_00000251f0928510, L_00000251f098f5a0, C4<1>, C4<1>;
+L_00000251f0927e10 .functor AND 1, L_00000251f098fa00, L_00000251f098ed80, C4<1>, C4<1>;
+L_00000251f0927e80 .functor OR 1, L_00000251f0928190, L_00000251f0927e10, C4<0>, C4<0>;
+v00000251f092b100_0 .net *"_ivl_1", 0 0, L_00000251f098f5a0;  1 drivers
+v00000251f092a520_0 .net *"_ivl_3", 0 0, L_00000251f098ed80;  1 drivers
+v00000251f092a2a0_0 .net "a1", 0 0, L_00000251f0928190;  1 drivers
+v00000251f092ade0_0 .net "a2", 0 0, L_00000251f0927e10;  1 drivers
+v00000251f092a980_0 .net "in", 1 0, L_00000251f098f000;  1 drivers
+v00000251f092a480_0 .net "n_s", 0 0, L_00000251f0928510;  1 drivers
+v00000251f092ad40_0 .net "out", 0 0, L_00000251f0927e80;  1 drivers
+v00000251f092a660_0 .net "select", 0 0, L_00000251f098fa00;  1 drivers
+L_00000251f098f5a0 .part L_00000251f098f000, 0, 1;
+L_00000251f098ed80 .part L_00000251f098f000, 1, 1;
+S_00000251f09027a0 .scope module, "mux2" "mux_2to1" 3 5, 4 1 0, S_00000251f0a6e0e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "in";
+    .port_info 1 /INPUT 1 "select";
+    .port_info 2 /OUTPUT 1 "out";
+L_00000251f09284a0 .functor NOT 1, L_00000251f098f320, C4<0>, C4<0>, C4<0>;
+L_00000251f0927fd0 .functor AND 1, L_00000251f09284a0, L_00000251f098e560, C4<1>, C4<1>;
+L_00000251f0928040 .functor AND 1, L_00000251f098f320, L_00000251f098e380, C4<1>, C4<1>;
+L_00000251f0928120 .functor OR 1, L_00000251f0927fd0, L_00000251f0928040, C4<0>, C4<0>;
+v00000251f092a7a0_0 .net *"_ivl_1", 0 0, L_00000251f098e560;  1 drivers
+v00000251f092ac00_0 .net *"_ivl_3", 0 0, L_00000251f098e380;  1 drivers
+v00000251f092a340_0 .net "a1", 0 0, L_00000251f0927fd0;  1 drivers
+v00000251f092a3e0_0 .net "a2", 0 0, L_00000251f0928040;  1 drivers
+v00000251f092a700_0 .net "in", 1 0, L_00000251f098eec0;  1 drivers
+v00000251f092a840_0 .net "n_s", 0 0, L_00000251f09284a0;  1 drivers
+v00000251f092aac0_0 .net "out", 0 0, L_00000251f0928120;  1 drivers
+v00000251f092a8e0_0 .net "select", 0 0, L_00000251f098f320;  1 drivers
+L_00000251f098e560 .part L_00000251f098eec0, 0, 1;
+L_00000251f098e380 .part L_00000251f098eec0, 1, 1;
+S_00000251f0902930 .scope module, "mux3" "mux_2to1" 3 8, 4 1 0, S_00000251f0a6e0e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "in";
+    .port_info 1 /INPUT 1 "select";
+    .port_info 2 /OUTPUT 1 "out";
+L_00000251f0927f60 .functor NOT 1, L_00000251f098e6a0, C4<0>, C4<0>, C4<0>;
+L_00000251f0933b90 .functor AND 1, L_00000251f0927f60, L_00000251f098ee20, C4<1>, C4<1>;
+L_00000251f09343e0 .functor AND 1, L_00000251f098e6a0, L_00000251f098f8c0, C4<1>, C4<1>;
+L_00000251f0934060 .functor OR 1, L_00000251f0933b90, L_00000251f09343e0, C4<0>, C4<0>;
+v00000251f092aa20_0 .net *"_ivl_1", 0 0, L_00000251f098ee20;  1 drivers
+v00000251f092ab60_0 .net *"_ivl_3", 0 0, L_00000251f098f8c0;  1 drivers
+v00000251f098e920_0 .net "a1", 0 0, L_00000251f0933b90;  1 drivers
+v00000251f098e240_0 .net "a2", 0 0, L_00000251f09343e0;  1 drivers
+v00000251f098e2e0_0 .net "in", 1 0, L_00000251f098e420;  alias, 1 drivers
+v00000251f098e9c0_0 .net "n_s", 0 0, L_00000251f0927f60;  1 drivers
+v00000251f098eb00_0 .net "out", 0 0, L_00000251f0934060;  alias, 1 drivers
+v00000251f098ea60_0 .net "select", 0 0, L_00000251f098e6a0;  1 drivers
+L_00000251f098ee20 .part L_00000251f098e420, 0, 1;
+L_00000251f098f8c0 .part L_00000251f098e420, 1, 1;
+    .scope S_00000251f0a6df50;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "mux_out.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000251f0a6df50 {0 0 0};
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v00000251f098ece0_0, 0, 4;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v00000251f098fd20_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v00000251f098ece0_0, 0, 4;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v00000251f098fd20_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 11, 0, 4;
+    %store/vec4 v00000251f098ece0_0, 0, 4;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v00000251f098fd20_0, 0, 2;
+    %delay 10, 0;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v00000251f098ece0_0, 0, 4;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v00000251f098fd20_0, 0, 2;
+    %delay 10, 0;
+    %vpi_call 2 19 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_00000251f0a6df50;
+T_1 ;
+    %vpi_call 2 23 "$monitor", "time : %0d in = %b select = %b  out = %b", $time, v00000251f098ece0_0, v00000251f098fd20_0, v00000251f098ec40_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "./mux_4to1.v";
+    "./mux_2to1.v";
