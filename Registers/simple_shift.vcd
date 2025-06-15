@@ -1,0 +1,55 @@
+$date
+	Thu Oct 17 08:42:05 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_shift $end
+$var wire 4 ! A [3:0] $end
+$var reg 1 " SI $end
+$var reg 1 # clear $end
+$var reg 1 $ clk $end
+$scope module s1 $end
+$var wire 1 " SI $end
+$var wire 1 # clear $end
+$var wire 1 $ clk $end
+$var reg 4 % A [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx %
+0$
+1#
+0"
+bx !
+$end
+#5
+b0 !
+b0 %
+1$
+#10
+b1000 !
+b1000 %
+0$
+1"
+0#
+#15
+b1100 !
+b1100 %
+1$
+#20
+0$
+#25
+b1110 !
+b1110 %
+1$
+#30
+0$
